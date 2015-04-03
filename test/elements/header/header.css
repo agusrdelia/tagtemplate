@@ -1,0 +1,14 @@
+.site-header{
+	padding: 10px 0;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 40px;
+	vertical-align: middle;
+}
+.site-header a{
+	float: left;
+	margin-right: 10px;
+}
+.site-header p{
+	float: left;
+	font: bold 20px/58px "Open Sans";
+}

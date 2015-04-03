@@ -1,0 +1,16 @@
+*{margin:0;padding:0;}
+img{
+	vertical-align: top;
+}
+.row{
+	width: 1020px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.col{
+	float: left;
+	margin: 0 10px;
+}
+.col_4{
+	width: 320px;
+}

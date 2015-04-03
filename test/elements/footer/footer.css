@@ -1,0 +1,18 @@
+.site-footer{
+	margin-top: 40px;
+	padding: 10px 0;
+	border-top: 1px solid #ddd;
+}
+.site-footer a{
+	float: left;
+	margin-right: 10px;
+}
+.site-footer .follow-us{
+	float: right;
+	font: 14px/29px "Open Sans";
+}
+.site-footer .follow-us *{
+	float: left;
+	color: #333;
+	margin: 0 0 0 10px;
+}

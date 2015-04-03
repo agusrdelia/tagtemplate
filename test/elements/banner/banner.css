@@ -1,0 +1,7 @@
+.banner{
+	text-align: center;
+	background-color:#efefef;
+}
+.banner > *{
+	padding: 20px 0 10px;
+}

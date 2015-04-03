@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Tag Templates Example | Iconosur</title>
+	<link rel="stylesheet" href="resources/application.css" />
+</head>
+<body>
+	
+	<t name="header"></t>
+	
+	<section class="site-content row">
+		<t name="entry" instance="box" size="2">
+			<include onposition="2" before>
+				<t name="banner" instance="300x250"></t>
+			</include>
+		</t>
+	</section>
+	
+	<t name="footer" script></t>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="resources/tagtemplate.min.js"></script>
+	<script type="text/javascript">
+		var Tpl = new Templates();
+		Tpl.init();
+	</script>
+</body>
+</html>
