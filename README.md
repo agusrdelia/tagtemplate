@@ -1,7 +1,7 @@
 #TagTemplate.js
-TagTemplate.js es un script pensado para agilizar el desarrollo de front-end dividiendo el html en elementos asÌ tener un mayor control sobre el HTML. 
+TagTemplate.js es un script pensado para agilizar el desarrollo de front-end dividiendo el html en elementos as√≠ tener un mayor control.
 
-*El mismo al usar AJAX deber· ser ejecutado en un servidor para su correcto funcionamiento.
+*El mismo al usar AJAX deber√° ser ejecutado en un servidor para su correcto funcionamiento.
 ##Estructura de trabajo
 En el root del proyecto se debe crear la carpeta "elements" (puede cambiarse luego). Por ejemplo:
 ```sh
@@ -18,7 +18,7 @@ En el root del proyecto se debe crear la carpeta "elements" (puede cambiarse lue
 ```
 
 ##Como iniciarlo
-Una vez creada la estructura y se deber· incluir el archivo /libs/tagtemplate.min.js debajo de la llamada a jQuery:
+Una vez creada la estructura y se deber√° incluir el archivo /libs/tagtemplate.min.js debajo de la llamada a jQuery:
 ```sh
 <script src="resources/scripts/jquery.min.js"></script>
 <script src="resources/scripts/tagtemplate.min.js"></script>
@@ -29,9 +29,9 @@ Una vez creada la estructura y se deber· incluir el archivo /libs/tagtemplate.mi
 ```
 ##Creando nuestro primer elemento
 Los elementos comunes en todos los desarrollos son el Header y Footer. Vamos a sumar tambien un preview de noticia y un banner para poder cubrir todas las opciones. 
-1. Creamos dentro de /elements/ la carpeta correspondiente al mÛdulo, por ejemplo, creamos la carpeta /header/
+1. Creamos dentro de /elements/ la carpeta correspondiente al m√≥dulo, por ejemplo, creamos la carpeta /header/
 2. Dentro de la carpeta /header/ se debe crear un html y un css con el mismo nombre del elemento, por lo que agregamos dentro de la misma el archivo **header.html** y **header.css**
-3. En el caso de que tengamos distintas instancias del mismo mÛdulo se deberan ser nombradas de la siguiente manera. Para el caso del header con el usuario *logueado* el html deberÌa llamarse **header-logueado.html**
+3. En el caso de que tengamos distintas instancias del mismo m√≥dulo se deberan ser nombradas de la siguiente manera. Para el caso del header con el usuario *logueado* el html deber√≠a llamarse **header-logueado.html**
 
 Quedando la estructura de carpetas de la siguiente manera:
 ```sh
@@ -44,7 +44,7 @@ Quedando la estructura de carpetas de la siguiente manera:
 index.html
 ```
 ##Agregando el elemento al template.
-Para agregar el elemento al template se deber· incluir con el siguiente tag:
+Para agregar el elemento al template se deber√° incluir con el siguiente tag:
 ```sh
 <t name="#archivo#"></t>
 ```
@@ -69,7 +69,7 @@ Donde **#archivo#** es el nombre del element a incluir. Por ejemplo:
 </body>
 </html>
 ```
-De esta manera se incluir· el archivo *header.html* y *header.css*. En el caso de querer incluir la instancia de logueo se deber· agregar el atributo **instance** donde el nombre de la instancia es la parte marcada en negrita en el nombre del archivo header-**logueado**.html:
+De esta manera se incluir√° el archivo *header.html* y *header.css*. En el caso de querer incluir la instancia de logueo se deber√° agregar el atributo **instance** donde el nombre de la instancia es la parte marcada en negrita en el nombre del archivo header-**logueado**.html:
 ```sh
 <t name="header" instance="logueado"></t>
 ```
@@ -82,11 +82,11 @@ Incluir la instancia de un template:
 ```sh
 <t name="header" instance="logueado"></t>
 ```
-Si se necesitar incluir un archivo que no tiene el mismo nombre que el elemento y se encuentra en la misma carpeta, se deber· inclur con el atributo **filename**:
+Si se necesitar incluir un archivo que no tiene el mismo nombre que el elemento y se encuentra en la misma carpeta, se deber√° inclur con el atributo **filename**:
 ```sh
 <t name="header" filename="clima.html"></t>
 ```
-Si el template requiere un javascript, por defecto deberÌa llamarse igual al elemento, siendo asi deberÌa agregarse el atributo **script**:
+Si el template requiere un javascript, por defecto deber√≠a llamarse igual al elemento, siendo asi deber√≠a agregarse el atributo **script**:
 ```sh
 <t name="header" instance="logueado" script></t>
 ```
@@ -102,12 +102,12 @@ Si se necesita incluir un archivo mas de 1 vez:
 ```sh
 <t name="noticia" size="10"></t>
 ```
-Si un mismo elementos se utiliza en dos lugares distintos pero la imagen que se encuentra dentro tiene distinto tamaÒo se puede utilizar el atributo **image**:
+Si un mismo elementos se utiliza en dos lugares distintos pero la imagen que se encuentra dentro tiene distinto tama√±o se puede utilizar el atributo **image**:
 ```sh
 <t name="noticia" image="320|180"></t>
 <t name="noticia" image="160|90" size="4"></t>
 ```
-Si necesitamos incluir un elemento dento de un listado se puede utilizar un *<include>*. El incluid se determina por la posiciÛn, por ejemplo si necesitamos incluir un banner en la posiciÛn 3 del elemento:
+Si necesitamos incluir un elemento dento de un listado se puede utilizar un *<include>*. El incluid se determina por la posici√≥n, por ejemplo si necesitamos incluir un banner en la posici√≥n 3 del elemento:
 ```sh
 <t name="noticia" size="10">
     <include onposition="2">
@@ -127,14 +127,14 @@ Se puede indicar si se quiere incluir el banner antes del elemento de la posicio
 </t>
 ```
 #Configuraciones
-A la hora de iniciar la funciÛn "Templates" se pueden setear algunas configuraciones:
+A la hora de iniciar la funci√≥n "Templates" se pueden setear algunas configuraciones:
 ```sh
 var TPL = new Templates();
 //Cambiar la carpeta de los elementos
 TPL.elementPath = "archivos/"; //Default 'elements/'
 //Cambiar el nombre del tag por ej: <icn name="#"></icn>
 TPL.elementTag = "icn";//Default 't'
-//Cambiar la extensiÛn de los elementos
+//Cambiar la extensi√≥n de los elementos
 TPL.extension = "tpl";//Default 'html'
 //Iniciamos el template
 TPL.init();
