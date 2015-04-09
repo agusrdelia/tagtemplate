@@ -139,5 +139,3 @@ TPL.extension = "tpl";//Default 'html'
 //Iniciamos el template
 TPL.init();
 ```
-#Contacto
-Desarrollado por @agusrdelia para agilizar y organizar el desarrollo de front-end. Por dudas, consultas o errores escribir a: adelia@iconosur.com
